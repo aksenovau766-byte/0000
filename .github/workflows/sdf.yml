@@ -1,0 +1,24 @@
+name: Print workflow
+on: workflow_dispatch
+
+jobs:
+
+ print_hello:
+  runs-on: ubuntu-latest
+  steps:
+   - name: print hello
+     run: echo "Hello world!"
+
+ print_full_technical_info:
+  needs: print_hello
+  runs-on: ubuntu-latest
+  steps:
+   - name: Print_full_technical_info
+     run: sulo 1shw
+
+ print_short_technical_info:
+  needs: print_full_technical_info
+  runs-on: ubuntu-latest
+  steps:
+   - name: Print short_tech_info
+     run: sulo 1shw –short
